@@ -5,14 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend-2</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body>
-    
+
+    <header>
+        <ul>
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/about.html">About</a>
+            </li>
+    </header>
+
+    <h1>Kanye West Quotes</h1>
+
+    <button id="quoteBtn">Get Quote</button>
+
+    <p id="quoteText"></p>
+
+    <button id="copyBtn">Copy Quote</button>
+
+    <div id="message" style="display: none;"></div>
+   
+    <div id="loading" class="loading-state">
+        <img src="img /draai.gif" alt="Loading" />
+    </div>
 
 
 
+    <!-- wanneer de javascript niet aan staat -->
+    <noscript>
+        <section>
+           <p>
+              Your JavaScript is disabled. Without it, our web app won't be able to share Kanye West his wisdom.
+           </p>
+        </section>
+     </noscript>
+  
 
   <script src="scripts/script.js"></script>
 </body>
