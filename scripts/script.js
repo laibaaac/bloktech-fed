@@ -59,19 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
-    
-    const loadingState = document.getElementById('loading');
-    loadingState.style.display = 'none';
 
-    // Event listener for hash change
-    window.addEventListener('hashchange', () => {
-        loadingState.style.display = 'block'; // Show the loading state
-        setTimeout(() => {
-            loadingState.style.display = 'none'; // Hide the loading state after 2 seconds
-        }, 2000);
-    });
 
-    // Event listener for DOMContentLoaded to hide the loading state
-    document.addEventListener('DOMContentLoaded', () => {
-        loadingState.style.display = 'none'; // Hide the loading state
-    });
+    const offlineMessage = document.getElementById('offlineMessage');
+
+    // Function to handle online event
+    const handleOnline = () => {
+      offlineMessage.style.display = 'none'; // Hide the offline message when online
+    };
+
+    // Function to handle offline event
+    const handleOffline = () => {
+      offlineMessage.style.display = 'block'; // Show the offline message when offline
+    };
+
+    // Add event listeners for online and offline events
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    // Check the initial online state
+    if (!navigator.onLine) {
+      handleOffline();
+    }
