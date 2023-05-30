@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend-2</title>
     <link rel="stylesheet" href="styles/style.css">
-
-    
-
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    </head>
 <body>
 
-    <h1>W I $ D O M</h1>
-    <H2>BY KANYE WEST</H2>
+    <h1 class="logo">W I $ D O M</h1>
+    <H2 class="anders">BY KANYE WEST</H2>
 
-    <img src="/img /beer.png" alt="">
+    <p id="quoteText"></p>
 
 
-    <a href="quote.html">
-        <button id="normal">Start</button>
-      </a>
-      
+    <div class="btns">
+      <button id="quoteBtn">Get Quote</button>
+
+      <button id="copyBtn">Copy Quote</button>
+    </div>
+  
+
+    <div id="message" style="display: none;"></div>
    
-    
+  
     <div id="offlineMessage" style="display: none;">
         <h2>You are offline</h2>
         <p>Please check your internet connection.</p>
