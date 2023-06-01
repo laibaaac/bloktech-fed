@@ -15,7 +15,7 @@ heb ik een app gemaakt, dat random quotes van Kanye west genereerd.
 
 ## Link 
 De live link:
-https://laibaaac.github.io/bloktech-fed/
+https://laibaaac.github.io/bloktech-fed/ 
 
 
 ## Inhoudopgave
@@ -39,35 +39,16 @@ https://laibaaac.github.io/bloktech-fed/
 
 
 ## Installatie
-git@github.com:laibaaac/bloktech-fed.git
 
+### Repository clone
 
-## API
-kanye west api 
+Dit repository clonen in de terminal:
 
-## Web-API
-De volgende api heb ik gebruikt:
-- service workers (offline support)
-- clipboard api
-- keyboard api 
+```bash
+$ git clone git@github.com:laibaaac/bloktech-fed.git
+```
 
 
 
-## Schetsen 
 
-## MoSCoW
-
-### Must have 
-
-### Should have 
-
-### Could have 
-
-
-### Would have 
-
-
-## Javascript disabled 
-
-## Offline
 
