@@ -6,6 +6,8 @@
 # Blok tech FED 2023
 
 ## Kanye West random quotes
+<img width="500" alt="Schermafbeelding 2023-06-01 om 18 46 26" src="https://github.com/laibaaac/bloktech-fed/assets/94360732/3c8e818e-f2c1-4e0b-ab58-116c21fa6511">
+
 
 
 
