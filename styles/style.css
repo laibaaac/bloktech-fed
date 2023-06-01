@@ -1,6 +1,6 @@
 
 body{
-    background-image: url("../img/wit.jpg");
+    background-image: url("./img/wit.jpg");
     background-attachment: fixed;
     width: 47vw; 
     margin: 0 auto; 
@@ -8,7 +8,8 @@ body{
 
 h1{
     font-family: 'Secular One', sans-serif;
-
+    font-weight: bold;
+    color: #000000;
 }
 
 h2{
@@ -19,8 +20,6 @@ h2{
 
 h1, h2{
     text-align: center;
-    color: #000000;
-   
 }
 p{
     font-family: 'Roboto', sans-serif;
@@ -33,10 +32,13 @@ img{
     position: relative;
     top: 5em;
 
+
 }
 
 .logo{
-    /* hier komt mijn h1 voor index.html */
+    font-family: 'Secular One', sans-serif;
+    font-weight: bold;
+    color: #000000;
 }
 
 
@@ -45,6 +47,7 @@ img{
     font-size: 1em;
     padding: 0;
     margin-top: -10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
