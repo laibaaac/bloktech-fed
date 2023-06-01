@@ -17,8 +17,8 @@ Ik heb een Kanye West random quotes applicatie gemaakt, hiervoor heb ik de [Kany
 De Kanye West api weergeeft de verschillende uitspraken van Kanye west. 
 Verder maak ik ook gebruik van web api's. 
 
-Zie mijn wiki voor meer details
-[Wiki](https://github.com/laibaaac/bloktech-fed/wiki)
+Zie mijn [Wiki](https://github.com/laibaaac/bloktech-fed/wiki) voor meer details
+
 
 
 
@@ -76,8 +76,7 @@ $ git clone git@github.com:laibaaac/bloktech-fed.git
 
 
 ### Port
-De website staat dan op port 5500
-
+Run de applicatie en Die staat dan op port 5500
 
 ## Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
