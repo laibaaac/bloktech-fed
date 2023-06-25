@@ -1,3 +1,5 @@
+// hier haal ik elementen op uit de html
+
 const quoteBtn = document.getElementById('quoteBtn');
 const quoteText = document.getElementById('quoteText');
 const copyBtn = document.getElementById('copyBtn');
@@ -78,9 +80,6 @@ function handleOnline() {
 function handleOffline() {
   offlineMessage.classList.add('show');
 }
-
-
-
 
 
 
