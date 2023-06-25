@@ -50,7 +50,7 @@ function copyQuoteToClipboard() {
     });
 }
 
-
+// hier wordt de event gebruikt, als ik op c of C druk dan wordt de functie copyQuoteToClipboard uitgevoerd
 function handleKeyDown(event) {
   if (event.key === 'c' || event.key === 'C') {
     copyQuoteToClipboard();
@@ -61,7 +61,7 @@ function handleKeyDown(event) {
 // Functie om een bericht weer te geven aan de gebruiker
 function showMessage(messageText) {
   message.innerText = messageText;
-  
+
   message.classList.add('show');
 
   setTimeout(() => {
