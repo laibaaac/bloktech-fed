@@ -15,26 +15,29 @@
     <h1 class="logo">W I $ D O M</h1>
     <H2 class="anders">BY KANYE WEST</H2>
 
+   <!-- hier komt de tekst vanuit de api -->
     <p id="quoteText"></p>
 
 
     <div class="btns">
+         <!-- door dit button kan ik een random quote vanuit de api krijgen-->
       <button id="quoteBtn">Get Quote</button>
 
+      <!-- door dit button kan ik dmv de clipboard api de tekst kopieren-->
       <button id="copyBtn">Copy Quote</button>
     </div>
   
-
-    <div id="message" style="display: none;"></div>
+      <!-- hier laat ik een tekst zien, als de tekst wel of niet is gekopieerd -->
+    <div id="message"></div>
    
-  
-    <div id="offlineMessage" style="display: none;">
+      <!-- Wordt weergegeven wanneer de gebruiker offline is -->
+    <div id="offlineMessage">
         <h2>You are offline</h2>
         <p>Please check your internet connection.</p>
       </div>
     
 
-    <!-- wanneer de javascript niet aan staat -->
+     <!-- wanneer de javascript niet aan staat, no script tag wordt gebruikt-->
     <noscript>
         <section>
            <p>

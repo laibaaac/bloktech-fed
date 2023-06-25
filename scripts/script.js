@@ -1,83 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const quoteBtn = document.getElementById('quoteBtn');
-    const quoteText = document.getElementById('quoteText');
-    const copyBtn = document.getElementById('copyBtn');
-    const message = document.getElementById('message');
-  
-    // Function to fetch the API and display a random quote
-    const getRandomQuote = () => {
-      fetch('https://api.kanye.rest')
-        .then(response => response.json())
-        .then(data => {
-          quoteText.innerText = data.quote;
-        })
-        .catch(error => {
-          console.log('Error:', error);
-        });
-    };
-  
-    // Function to copy the quote text to the clipboard and show the message
-    const copyQuoteToClipboard = () => {
-      const quote = quoteText.innerText;
-      if (quote.trim() === '') {
-        showMessage('Get a quote first!');
-        return;
-      }
-  
-      navigator.clipboard.writeText(quote)
-        .then(() => {
-          console.log('Quote copied to clipboard:', quote);
-          showMessage('Quote copied!');
-        })
-        .catch(error => {
-          console.log('Error copying quote to clipboard:', error);
-        });
-    };
-  
-    // Function to show the message and hide it after 2 seconds
-    const showMessage = messageText => {
-      message.innerText = messageText;
-      message.style.display = 'block';
-      setTimeout(() => {
-        message.style.display = 'none';
-      }, 2000);
-    };
-  
-    // Event listener for the button click to get a random quote
-    quoteBtn.addEventListener('click', getRandomQuote);
-  
-    // Event listener for the "C" key press to copy the quote
-    document.addEventListener('keydown', event => {
-      if (event.key === 'c' || event.key === 'C') {
-        copyQuoteToClipboard();
-      }
+const quoteBtn = document.getElementById('quoteBtn');
+const quoteText = document.getElementById('quoteText');
+const copyBtn = document.getElementById('copyBtn');
+const message = document.getElementById('message');
+const offlineMessage = document.getElementById('offlineMessage');
+
+// Event listener voor het klikken op de "Get Quote" knop
+quoteBtn.addEventListener('click', getRandomQuote);
+
+// Event listener voor de keys (om te controleren op 'c' of 'C')
+document.addEventListener('keydown', handleKeyDown);
+
+// Event listener voor het klikken op de "Copy Quote" knop
+copyBtn.addEventListener('click', copyQuoteToClipboard);
+
+// Event listener voor het online gaan van de gebruiker
+window.addEventListener('online', handleOnline);
+
+// Event listener voor het offline gaan van de gebruiker
+window.addEventListener('offline', handleOffline);
+
+
+// Functie om een random quote op te halen vanuit de Kanye West API
+function getRandomQuote() {
+  fetch('https://api.kanye.rest')
+    .then(response => response.json())
+    .then(data => {
+      quoteText.innerText = data.quote;
+    })
+    .catch(error => {
+      console.log('Error:', error);
     });
-  
-    // Event listener for the copy button click to copy the quote
-    copyBtn.addEventListener('click', copyQuoteToClipboard);
+}
 
+// Functie om de quote naar het klembord te kopiëren
+function copyQuoteToClipboard() {
+  const quote = quoteText.innerText;
+  if (quote.trim() === '') {
+    showMessage('Get a quote first!');
+    return;
+  }
 
-
+  navigator.clipboard.writeText(quote)
+    .then(() => {
+      console.log('Quote copied to clipboard:', quote);
+      showMessage('Quote copied!');
+    })
+    .catch(error => {
+      console.log('Error copying quote to clipboard:', error);
     });
+}
 
 
-    const offlineMessage = document.getElementById('offlineMessage');
+function handleKeyDown(event) {
+  if (event.key === 'c' || event.key === 'C') {
+    copyQuoteToClipboard();
+  }
+}
 
-    // Function to handle online event
-    const handleOnline = () => {
-      offlineMessage.style.display = 'none'; // Hide the offline message when online
-    };
 
-    // Function to handle offline event
-    const handleOffline = () => {
-      offlineMessage.style.display = 'block'; // Show the offline message when offline
-    };
+// Functie om een bericht weer te geven aan de gebruiker
+function showMessage(messageText) {
+  message.innerText = messageText;
+  
+  message.classList.add('show');
 
-    // Add event listeners for online and offline events
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+  setTimeout(() => {
+    message.classList.remove('show');
+  }, 2000);
+}
 
-    // Check the initial online state
-    if (!navigator.onLine) {
-      handleOffline();
-    }
+// Functie om te reageren op het online gaan van de gebruiker
+function handleOnline() {
+  offlineMessage.classList.remove('show');
+}
+
+// Functie om te reageren op het offline gaan van de gebruiker
+function handleOffline() {
+  offlineMessage.classList.add('show');
+}
+
+
+
+
+
+
+// Functie om te controleren of de gebruiker online of offline is bij het laden van de pagina
+function checkOnlineState() {
+  if (!navigator.onLine) {
+    handleOffline();
+  }
+}
+// Controleren van de online/offline status bij het laden van de pagina
+checkOnlineState();

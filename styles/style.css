@@ -1,111 +1,128 @@
+:root {
+    --primary-color: #000000;
+    --font-family-heading: 'Secular One', sans-serif;
+    --font-family-body: 'Roboto', sans-serif;
+}
 
-body{
+body {
+    margin: 0 auto;
+    width: 47vw;
     background-image: url('../img/wit.jpg');
     background-attachment: fixed;
-    width: 47vw; 
-    margin: 0 auto; 
 }
 
-h1{
-    font-family: 'Secular One', sans-serif;
+h1 {
+    color: var(--primary-color);
+    font-family: var(--font-family-heading);
     font-weight: bold;
-    color: #000000;
-}
-
-h2{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-h1, h2{
     text-align: center;
 }
-p{
-    font-family: 'Roboto', sans-serif;
-    height: 15em;
+/* algemene h2 styling */
+h2 {
+    font-family: var(--font-family-body);
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+/* algemene h3 styling */
+h3 {
+    display: none;
 }
 
-img{
+/* algemene p styling */
+p {
+
+    height: 15em;
+    font-family: var(--font-family-body);
+}
+
+/* algemene afbeelding styling */
+img {
     width: 100%;
     height: 100%;
     position: relative;
     top: 5em;
-
-
 }
 
-.logo{
-    font-family: 'Secular One', sans-serif;
-    font-weight: bold;
-    color: #000000;
-}
-
-
-.anders{
-    /* hier komt mijn h2 voor index.html */
-    font-size: 1em;
-    padding: 0;
-    margin-top: -10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-
-button{
+/* algemene button styling */
+button {
     background-color: black;
     color: white;
-    padding: 10px 40px;
-    border-radius: solid 5px black;
-    font-family: 'Secular One', sans-serif;
-
-}
-#normal{
-    /* hier komt mijn button voor index.html */
-    position: relative;
-    top: 10em;
-    padding: 35px 60px;
-    font-size: 1em;
+    padding: 1em 2.5em;
+    border-radius: .1em;
+    font-family: var(--font-family-heading);
     font-weight: bold;
 
 }
 
-
-
-#message {
-    position: absolute;
-    bottom: 13em;
-    right: 5em;
-   /* padding: 2em; */
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
+/* Styling voor de h1 op de quotes.html*/
+.logo {
+    color: var(--primary-color);
+    font-family: var(--font-family-heading);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
 }
 
-.btns{
-    /* hier komt mijn button voor quote.html */
+/* Styling voor de h2 op de quotes.html*/
+.anders {
+    font-size: 1em;
+    padding: 0;
+    margin-top: -0.1em;
+    font-family: var(--font-family-body);
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+/* Styling voor de button op de quotes.html*/
+.btns {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     gap: 1em;
 }
 
-#quoteBtn{
-    /* hier komt mijn button voor quote.html */
-
-}
-
-#copyBtn{
-    /* hier komt mijn button voor quote.html */
-}
-
-
-#loadingState {
-    display: none;
+#quoteText{
     text-align: center;
-    margin-top: 20px;
+}
+/* Styling voor de start button op index.html*/
+#normal {
+    position: relative;
+    top: 10em;
+    left: .5em;
+    padding: 2em 3.5em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: .1em;
+    font-family: var(--font-family-heading);
+    text-decoration: none;
+
+}
+
+/* Styling voor de tekst, als de tekst van gekopieerd is of niet*/
+#message {
+    position: absolute;
+    bottom: 10em;
+    right: 5em;
+    font-size: 15px;
+    font-family: var(--font-family-body);
+    display: none;
+}
+  #message.show {
+    display: block;
   }
+
+
+
+
+/* Styling voor de offline bericht*/
+#offlineMessage {
+    display: none;
+}
   
-  #loadingState img {
-    width: 100px;
-    height: 100px;
+  #offlineMessage.show {
+    display: block;
   }
   
