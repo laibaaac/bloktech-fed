@@ -4,6 +4,7 @@
     --font-family-body: 'Roboto', sans-serif;
 }
 
+/* algemene body styling */
 body {
     margin: 0 auto;
     width: 47vw;
@@ -11,6 +12,7 @@ body {
     background-attachment: fixed;
 }
 
+/* algemene h1 styling */
 h1 {
     color: var(--primary-color);
     font-family: var(--font-family-heading);
@@ -113,8 +115,6 @@ button {
   #message.show {
     display: block;
   }
-
-
 
 
 /* Styling voor de offline bericht*/
