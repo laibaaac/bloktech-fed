@@ -13,7 +13,7 @@
 
 Voor het vak frontend development kregen wij de opdracht om een applicatie te maken, waar we de kernconcepten van JavaScript verbeteren en leren hoe we interfaces geleidelijk kunnen verbeteren met voornamelijk JavaScript. 
 Wij moeten meerdere frontend-componenten ontwerpen en bouwen met behulp van client-side JavaScript.
-Hiervoor moeten wij een web api kunnen fetchen en ook third party api's kunnen gebruiken (progressive enhancement). 
+Hiervoor moeten wij een third party api kunnen fetchen en ook web api's kunnen gebruiken (progressive enhancement). 
 
 Ik heb een Kanye West random quotes applicatie gemaakt, hiervoor heb ik de [Kanye West api](https://kanye.rest/) gebruikt. 
 De Kanye West api weergeeft de verschillende uitspraken van Kanye west. 
@@ -31,7 +31,7 @@ https://laibaaac.github.io/bloktech-fed/
 
 ## Inhoudopgave
 - [Features](#features)
-- [Third party api's](#third-party-api-s)
+- [Web API](#web-api)
 - [Tools](#tools)
 - [Installatie](#installatie)
   * [Repository clone](#repository-clone)
@@ -48,7 +48,7 @@ https://laibaaac.github.io/bloktech-fed/
 - Javascript disabled support 
 
 
-## Third party api's
+## Web API
 De volgende api's heb ik gebruikt:
 - clipboard api
 - keyboard api 
