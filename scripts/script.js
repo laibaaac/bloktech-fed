@@ -23,15 +23,14 @@ window.addEventListener('offline', handleOffline);
 
 
 // Functie om een random quote op te halen vanuit de Kanye West API
-function getRandomQuote() {
-  fetch('https://api.kanye.rest')
-    .then(response => response.json())
-    .then(data => {
-      quoteText.innerText = data.quote;
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+async function getRandomQuote() {
+  try {
+    const response = await fetch('https://api.kanye.rest');
+    const data = await response.json();
+    quoteText.innerText = data.quote;
+  } catch (error) {
+    console.log('Error:', error);
+  }
 }
 
 // Functie om de quote naar het klembord te kopiëren
